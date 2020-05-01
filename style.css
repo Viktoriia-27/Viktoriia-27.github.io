@@ -3,7 +3,7 @@
 }
 /* ширина блоку, в яку входит пединг и бордер */
 body {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 .container {
 	width: 1170px;
