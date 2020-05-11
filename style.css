@@ -1,14 +1,166 @@
 * {
 	box-sizing: border-box; 
 }
-/* ширина блоку, в яку входит пединг и бордер */
+/* ширина блоку, в яку входить педінг і бордер */
 body {
 	font-family: 'Roboto', sans-serif;
+	background-image: url(images/patt.png);
 }
 .container {
-	width: 1170px;
+	width: 1200px;
 	margin: 0 auto;
 }
 .header {
-	background-color: antiquewhite;
+	background-color: rgba(255, 255, 255, 0.75);
+	padding: 25px 0;
 }
+.col-md-3 {
+	width: 25%;
+}
+.col-md-6 {
+	width: 50%;
+}
+[class*="col-"] {
+	float: left;
+}
+.row:after, .menu:after, .card:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+.menu li {
+	width: 25%;
+	float: left;
+	border-left: 1px solid #2c71b8;
+}
+.menu li:last-child {
+	border-right: 1px solid #2c71b8;
+}
+.menu a {
+	display: block;
+	text-decoration: none;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-weight: 300;
+	color: #2c71b8;
+	font-size: 21px;
+}
+.menu a:hover {
+
+	background-color: #2c71b8;
+	color: white;
+}
+.logo {
+	margin-top: 7px;
+}
+
+/* next point */
+
+.search form {
+	margin-left: 30px;
+	margin-top: 5px;
+	width: 200px;
+	height: 40px;
+	border: 1px solid #2c71b8;
+}
+.colortext {
+	width: 160px;
+	height: 37px;
+	border: none;
+	background-color: rgba(202, 219, 237, 0.1);
+	color: #2c71b8;
+	font-family: Roboto;
+	font-size: 21px;
+	font-weight: 300;
+	outline: none;
+	position: absolute;
+}
+.search ::placeholder {
+	color: #2c71b8;	
+}
+.search [type="text"] {
+	padding-left: 20px;
+}
+.button {
+	background-image: url(images/1.png);
+	border: none;
+	width: 30px;
+	height: 30px;
+	outline: none;
+	position: relative;
+	left: 163px;
+	top: 4px;	
+}
+.basket {
+	background-image: url(images/2.png);
+	width: 18px;
+	height: 20px;
+	border: none;
+	background-color: white;
+	outline: none;
+}
+.card {
+	margin-top: 5px;
+	margin-left: 30px;
+	border-top: 8px solid white;
+	border-right: 10px solid white;
+	border-bottom: 9px solid white;
+	border-left: 10px solid white;
+	position: absolute;
+}
+.total_products table {
+	background-color: #2c71b8;
+	color: white;
+	border-radius: 15px;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	font-size: 15px;
+	position: relative;
+	left: 20px;
+	top: -5px;
+}
+.submenu ul {
+	margin: 0;
+	padding: 0;
+}
+.submenu ul li {
+	width: 301px;
+}
+.submenu a {
+	
+	padding-left: 32px;
+	text-align: left;
+	background-color: #2c71b8;
+	color: white;
+}
+.menu li a:hover {
+	background-color: #2c71b8;
+
+	color: white;
+
+}
+.submenu a:hover {
+	background-color: white;
+	color: #2c71b8;
+}
+.submenu {
+	position: absolute;	
+	left: 150px;
+}
+.menu {
+	position: relative;
+}
+nav ul ul  {
+	display: none;
+	position: absolute;	
+}
+nav ul li:hover .submenu ul {
+	display: block;
+}
+
+
+
+
