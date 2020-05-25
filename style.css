@@ -7,7 +7,7 @@ body {
 	background-image: url(images/patt.png);
 }
 .container {
-	width: 1200px;
+	width: 1170px;
 	margin: 0 auto;
 }
 .header {
@@ -136,12 +136,6 @@ body {
 	background-color: #2c71b8;
 	color: white;
 }
-/* .menu li a:hover {
-	background-color: #2c71b8;
-
-	color: white;
-
-} */
 .submenu a:hover {
 	background-color: white;
 	color: #2c71b8;
@@ -160,6 +154,201 @@ nav ul ul  {
 nav ul li:hover .submenu ul {
 	display: block;
 }
+.main {
+	margin-top: 400px;
+	margin-left: 350px;
+}
+.breadcrumb, .title {
+	list-style: none;
+	margin-left: 30px;
+}
+.breadcrumb li a {
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 14px;
+}
+.breadcrumb li {
+	display: inline;
+}
+.breadcrumb li+li:before {
+    color: rgba(255, 255, 255, 0.5);
+	content: ">";
+	padding-right: 4px;
+}
+.breadcrumb li a:hover {
+	text-decoration: underline;
+	color: rgba(255, 255, 255, 0.5);
+}
+.title h1 {
+	font-size: 48px;
+	font-weight: 700;
+	color: white;
+}
+.title {
+	margin-top: 25px;
+}
+.title, .sort {
+	float: left;
+}
+.wrap:after {
+	display: table;
+	clear: both;
+	content: "";
+}
+.sort {
+	margin-left: 175px;
+}
+.main_container {
+	margin-left: 30px;
+	margin-top: 50px;
+}
+[class*="col_mc_"] {
+	float: left;
+	display: block;
+	width: 270px;
+	height: 650px;
+}
+.col_mc_1 {
+	border: 1px solid white;
+}
+.row_mc_1:after, .row_mc_2:after, .row_mc_3:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+.pic_product {
+	background-image: url(images/Фигура_4.png);
+	width: 103px;
+	height: 90px;
+	position: absolute;
+	left: 83px;
+	top: 45px;
+}
+.image, .image_2, .image_3  {
+	background-color: rgba(255, 255, 255, 0.5);
+	width: 270px;
+	height: 180px;
+	position: relative;
+}
+.pic_zoom1, .pic_zoom2, .pic_zoom3 {
+	background: url(images/Прямоугольник_4_копия_12.png) no-repeat;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	z-index: 20;	
+}
+.pic_like1, .pic_like2, .pic_like3 {
+	background: url(images/Эллипс_2_копия_5.png) no-repeat;
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	top: 57px;
+	right: 16px;
+	z-index: 20;
+}
+
+.like_border, .zoom_border, .like_border_2, .zoom_border_2, .like_border_3, .zoom_border_3 {
+	background-image: url(images/Прямоугольник\,_скругл._углы_1_копия_17.png);
+	width: 30px;
+	height: 30px;
+}
+.zoom_border, .zoom_border_2, .zoom_border_3 {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+.like_border, .like_border_2, .like_border_3 {
+	position: absolute;
+	top: 50px;
+	right: 10px;
+} 
+[class*="col_mc_"] > div > h1, p {
+	color: #ffffff;
+}
+[class*="col_mc_"]  > div > h1 {
+font-family: "Roboto";
+font-size: 30px;
+font-weight: 700;
+}
+[class*="col_mc_"]  > div > p {
+	font-weight: 300;	
+	font-size: 21px;
+	padding-top: 18px;
+}
+[class*="col_mc_"]  span {
+font-weight: 700;
+}
+.about_product, .about_product_2 , .about_product_3 {
+	width: 250px;
+	height: 213px;
+	padding-top: 15px;
+	padding-left: 15px;
+}
+.cost span {
+font-family: Roboto;
+font-size: 48px;
+font-weight: 700;
+}
+.cost {
+	text-align: center;
+}
+div button {
+	width: 210px;
+	height: 45px;
+	margin-top: 16px;
+	color: white;
+	border: 1px solid white;
+	background-color: rgba(44, 113, 184, 0.7);
+	font-size: 21px;
+	font-weight: 700;
+	font-family: Roboto;		
+}
+.btn, .btn_2, .btn_3 {
+	width: 220px;
+	height: 110px;
+	position: relative;
+	left: 30px;
+	top: 110px;
+}
+.pic_basket, .pic_basket_2 , .pic_basket_3{
+	background: url(images/Фигура\ 3\ копия\ 4.png) no-repeat;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 10px;
+	bottom: -10px;
+	z-index: 20;
+}
+/* БЛОК 2222222222222222222222222222222222 */
+.pic_product_2 {
+	background-image: url(images/Фигура\ 4\ копия\ 7.png);
+	width: 103px;
+	height: 90px;
+	position: absolute;
+	left: 83px;
+	top: 45px;
+}
+.col_mc_2 {
+	margin-left: 30px;
+	border: 1px solid white;
+}
+/* БЛОК 3333333333333333333333333333333333333333333 */
+.pic_product_3 {
+	background: url(images/Фигура\ 4\ копия\ 723.png) no-repeat;
+	width: 103px;
+	height: 90px;
+	position: absolute;
+	left: 105px;
+	top: 45px;
+}
+.col_mc_3 {
+	margin-left: 30px;
+	border: 1px solid white;
+}
+
+
 
 
 
