@@ -57,8 +57,10 @@ body {
 
 /* next point */
 
+.search {
+	padding-left: 30px;
+}
 .search form {
-	margin-left: 30px;
 	margin-top: 5px;
 	width: 200px;
 	height: 40px;
@@ -92,23 +94,27 @@ body {
 	left: 163px;
 	top: 4px;	
 }
-.basket {
-	background-image: url(images/2.png);
-	width: 18px;
-	height: 20px;
-	border: none;
-	background-color: white;
-	outline: none;
+
+.col-9 {
+	width: 75%;
+}
+.col-3{
+	width: 25%;
+	padding-top: 4px;
+	padding-left: 40px;
 }
 .card {
-	margin-top: 5px;
-	margin-left: 30px;
-	border-top: 8px solid white;
-	border-right: 10px solid white;
-	border-bottom: 9px solid white;
-	border-left: 10px solid white;
-	position: absolute;
+	position: relative;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    background-image: url(images/2.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    background-position: center;
+    background-size: 20px 20px;
 }
+
 .total_products table {
 	background-color: #2c71b8;
 	color: white;
@@ -118,9 +124,11 @@ body {
 	line-height: 20px;
 	text-align: center;
 	font-size: 15px;
+}
+.total_products {
 	position: relative;
-	left: 20px;
-	top: -5px;
+	top: -50px;
+	right: 10px;
 }
 .submenu ul {
 	margin: 0;
@@ -136,7 +144,7 @@ body {
 	background-color: #2c71b8;
 	color: white;
 }
-.submenu a:hover {
+.submenu ul li a:hover{
 	background-color: white;
 	color: #2c71b8;
 }
@@ -147,6 +155,11 @@ body {
 .menu {
 	position: relative;
 }
+.menu > li:hover a {
+	background-color:#2c71b8;
+	color:white;
+}
+
 nav ul ul  {
 	display: none;
 	position: absolute;	
@@ -154,13 +167,28 @@ nav ul ul  {
 nav ul li:hover .submenu ul {
 	display: block;
 }
-.main {
+.main_container {
 	margin-top: 400px;
-	margin-left: 350px;
+	position: relative;
 }
+.main_col_3 {
+	width: 25%;
+}
+.main_col_9 {
+	width: 75%;
+}
+[class*="main_col"] {
+	float: left;
+}
+.main_row::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
 .breadcrumb, .title {
 	list-style: none;
-	margin-left: 30px;
 }
 .breadcrumb li a {
 	text-decoration: none;
@@ -179,25 +207,34 @@ nav ul li:hover .submenu ul {
 	text-decoration: underline;
 	color: rgba(255, 255, 255, 0.5);
 }
-.title h1 {
+.title_of_products {
+	padding-top: 25px;
 	font-size: 48px;
 	font-weight: 700;
 	color: white;
+	width: 75%;
 }
-.title {
-	margin-top: 25px;
+.sort{
+	width: 25%;
 }
-.title, .sort {
+.title_of_products, .sort {
 	float: left;
 }
-.wrap:after {
-	display: table;
-	clear: both;
+.sort:after {
 	content: "";
+	display: block;
+	clear: both;
 }
 .sort {
-	margin-left: 175px;
-	margin-top: 30px;
+	position: absolute;
+	right: 75px;
+	top: 45px;
+}
+.sub_sort{
+	position: absolute;
+	left: 0px;
+	top: 40px;
+	z-index: 50;
 }
 .sort a {
 	text-decoration: none;
@@ -206,48 +243,37 @@ nav ul li:hover .submenu ul {
 	font-size: 21px;
 	font-weight: 300;
 	padding-left: 20px;
+	line-height: 40px;
+	background-color: #2c71b8;
 }
 .sort ul {
-	display: block;
-}
-/* .sort li:hover {
-	background-color: white;
-
-} */
-.sort a:hover {
-	color: white;
-	background-color:#2c71b8;
+	background-color: #2c71b8;
 	width: 270px;
-	height: 40px;
-}
-.sort li a {
-	line-height: 40px;
 }
 .sort li {
-	width: 270px;
 	height: 40px;
-	background-color: #2c71b8;
 	border: 1px solid white;
 }
-
-.sort ul ul {
-	display: none; 
-	position: absolute;	 
-	z-index: 30;
-
-}
-.sort ul li:hover ul {
-	display: block;
-}
-.sort ul li a:hover  {
+.sort a:hover {
 	color: #2c71b8;
 	background-color: white;
 }
-
-
-.main_container {
-	margin-left: 30px;
-	margin-top: 50px;
+.sort > li:hover a {
+	background-color: white;
+}
+.sub_sort ul li a:hover{
+	color: #2c71b8;
+	background-color: white;
+}
+.sort ul ul {
+	display: none;
+}
+.sort ul li:hover .sub_sort ul {
+	display: block;
+}
+/* Доробити випадаюче меню в сортуванні */
+.product_catalog {
+	padding-top: 100px;
 }
 [class*="col_mc_"] {
 	float: left;
@@ -270,15 +296,13 @@ nav ul li:hover .submenu ul {
 	position: absolute;
 	left: 83px;
 	top: 45px;
-}
-/* .image, .image_2, .image_3,  .image_4, .image_5, .image_6  */
+} 
 [class*="image"]{
 	background-color: rgba(255, 255, 255, 0.5);
 	width: 270px;
 	height: 180px;
 	position: relative;
 }
-/* .pic_zoom1, .pic_zoom2, .pic_zoom3, .pic_zoom4,  .pic_zoom5, .pic_zoom6  */
 [class*="pic_zoom"]{
 	background: url(images/Прямоугольник_4_копия_12.png) no-repeat;
 	width: 20px;
@@ -288,7 +312,6 @@ nav ul li:hover .submenu ul {
 	right: 15px;
 	z-index: 20;	
 }
-/* .pic_like1, .pic_like2, .pic_like3, .pic_like4, .pic_like5, .pic_like6  */
 [class*="pic_like"]{
 	background: url(images/Эллипс_2_копия_5.png) no-repeat;
 	width: 18px;
@@ -298,23 +321,19 @@ nav ul li:hover .submenu ul {
 	right: 16px;
 	z-index: 20;
 }
-
-/* .like_border, .zoom_border, .like_border_2, .zoom_border_2, .like_border_3, .zoom_border_3, .like_border_4, .zoom_border_4, .like_border_5, .zoom_border_5,  .like_border_6, .zoom_border_6  */
 [class*="like_border"] {
 	background-image: url(images/Прямоугольник\,_скругл._углы_1_копия_17.png);
 	width: 30px;
 	height: 30px;
-}
+}  
 [class*="zoom_border"] {
 	background-image: url(images/Прямоугольник\,_скругл._углы_1_копия_17.png);
 	width: 30px;
-	height: 30px;
-/* .zoom_border, .zoom_border_2, .zoom_border_3, .zoom_border_4, .zoom_border_5, .zoom_border_6  */
+	height: 30px; 
 	position: absolute;
 	top: 10px;
 	right: 10px;
 }
-/* .like_border, .like_border_2, .like_border_3, .like_border_4, .like_border_5, .like_border_6  */
 [class*="like_border"]{
 	position: absolute;
 	top: 50px;
@@ -324,9 +343,9 @@ nav ul li:hover .submenu ul {
 	color: #ffffff;
 }
 [class*="col_mc_"]  > div > h1 {
-font-family: "Roboto";
-font-size: 30px;
-font-weight: 700;
+	font-family: "Roboto";
+	font-size: 30px;
+	font-weight: 700;
 }
 [class*="col_mc_"]  > div > p {
 	font-weight: 300;	
@@ -334,9 +353,8 @@ font-weight: 700;
 	padding-top: 18px;
 }
 [class*="col_mc_"]  span {
-font-weight: 700;
+	font-weight: 700;
 }
-/* .about_product, .about_product_2 , .about_product_3, .about_product_4,  .about_product_5, .about_product_6  */
 [class*="about_product"]{
 	width: 250px;
 	height: 213px;
@@ -344,9 +362,9 @@ font-weight: 700;
 	padding-left: 15px;
 }
 .cost span {
-font-family: Roboto;
-font-size: 48px;
-font-weight: 700;
+	font-family: Roboto;
+	font-size: 48px;
+	font-weight: 700;
 }
 .cost {
 	text-align: center;
@@ -362,7 +380,6 @@ div button {
 	font-weight: 700;
 	font-family: Roboto;		
 }
-/* .btn, .btn_2, .btn_3, .btn_4, .btn_5, .btn_6 */
 [class*="btn"] {
 	width: 220px;
 	height: 110px;
@@ -370,7 +387,6 @@ div button {
 	left: 30px;
 	top: 110px;
 }
-/* .pic_basket, .pic_basket_2 , .pic_basket_3, .pic_basket_4, .pic_basket_5, .pic_basket_6  */
 [class*="pic_basket_"]{
 	background: url(images/Фигура\ 3\ копия\ 4.png) no-repeat;
 	width: 30px;
@@ -394,7 +410,7 @@ div button {
 	border: 1px solid white;
 }
 /* БЛОК 3333333333333333333333333333333333333333333 */
-.pic_product_3 {
+ .pic_product_3 {
 	background: url(images/Фигура\ 4\ копия\ 723.png) no-repeat;
 	width: 103px;
 	height: 110px;
@@ -432,7 +448,7 @@ div button {
 	margin-top: 30px;
 	margin-left: 30px;
 	border: 1px solid white;
-}
+} 
 /* БЛОК 6666666666666666666666666666666666666666 */
 .pic_product_6 {
 	background: url(images/icon\ \(12\).png) no-repeat;
@@ -473,7 +489,7 @@ div button {
 	margin-top: 30px;
 	margin-left: 30px;
 	border: 1px solid white;
-}
+} 
 /* БЛОК 9999999999999999999999999999999999999999999 */
 .pic_product_9 {
 	background: url(images/icon\ \(13\).png) no-repeat;
@@ -488,7 +504,7 @@ div button {
 	margin-left: 30px;
 	border: 1px solid white;
 }
-div > h2 {
+ div > h2 {
 color: white;
 font-family: "Roboto";
 font-size: 30px;
@@ -504,98 +520,65 @@ input [class*="check"], [type="checkbox"]{
 label::before {
 	content: "";
 	display: block;
-	width: 10px;
-	height: 10px;
+	width: 6px;
+	height: 6px;
 	border: 1px solid white;
 	cursor: pointer;
-
+	position: absolute;
 }
-input [class*="check"], [type="checkbox"]:checked + label:before {
+input [class*="check"], [type="checkbox"]:checked + label:before  {
 	background-color: white;
 }
-
-aside {
-	position: absolute;
-	left: 75px;
-	top: 640px;
-	border: 1px solid white;
-	height: 845px;
-	width: 270px;
-}
-.device_type {
-	position: relative;
-	top: 30px;
-	left: 30px;
-}
-p {
+.main_col_3 p {
 	text-transform: uppercase;	
 	font-family: Roboto;
-	font-size: 21px;
+	font-size: 19px;
 	font-weight: 700;
-}
-.check1{
-	top: 75px;
-}
-.check2 {
-	top: 100px;
-}
-.color {
-	position: relative;
-	top: 125px;
-	left: 30px;
-}
-.check3 {
-	top: 150px;
-}
-.check4 {
-	top: 175px;
-}
-.check5 {
-	top: 200px;
-}
-.check6 {
-	top: 225px;
-}
-.check7 {
-	top: 250px;
-}
-.ram {
-	top: 275px;
-	position: relative;
-	left: 30px;
-}
-.check8 {
-	top: 300px;
-}
-.check9 {
-	top: 325px;
-}
-.check10 {
-	top: 350px;
-}
-.check11 {
-	top: 375px;
-}
-.check12 {
-	top: 400px;
-}
-[class*=check]{
-	position: relative;
-	left: 50px;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	padding-left: 13px;
+} 
+label {
 	color: white;
-	font-size: 20px;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 300;
+	position: relative;
+}
+aside {
+
+	height: 845px;
+	width: 270px;
+	padding-left: 30px;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+.main_col_3 {
+	padding-left: 38px;
+}
+label::before {
+	top: 5px;
+	left: 0px;	
+}
+[class*="label"]{
+	padding-left: 15px;	
+}
+.main_col_3 aside div div {
+	padding: 14px;
+}
+.main_col_3 aside div button {
+	text-transform: uppercase;
+	position: absolute;
+	background-color: #2c71b8;
+}
+.text_in_asside {
+	text-transform: none;
+	font-weight: 300;
+	color: white;
 }
 
-/* input [class*="check"] {
-	position: relative;
-	left: 30px;
-} */
-.label1 {
-	position: relative;
-	top: 75px;
-	left: 30px;
-	
-}
+
+
+
 
 
 
