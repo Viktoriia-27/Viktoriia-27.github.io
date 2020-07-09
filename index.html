@@ -5,6 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="reset.css">
+
+	<link rel="stylesheet" type="text/css" href="slick/slick.css" />
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<title>Document</title>
@@ -55,12 +59,12 @@
 					</div>
 					<div class="col-3">
 						<div class="card"></div>
-						<div class="total_products">
-							<table>
+						<div class="total_products" id="products-count">0
+							<!-- <table>
 								<tr>
 									<td>4</td>
 								</tr>
-							</table>
+							</table> -->
 						</div>
 					</div>
 					<!-- </div> -->
@@ -69,6 +73,15 @@
 		</div>
 	</header>
 	<main>
+		<div class="container">
+			<div class="row">
+				<div class="slider-block">
+					<div>slider 1</div>
+					<div>slider 2</div>
+					<div>slider 3</div>
+				</div>
+			</div>
+		</div>
 		<div class="container">
 			<div class="main_row">
 				<div class="main_col_3">
@@ -173,7 +186,7 @@
 									</div>
 									<div>
 										<div class="like_border"></div>
-										<div class="pic_like1"></div>
+										<div class="pic_like1 wish liked"></div>
 									</div>
 								</div>
 								<div class="about_product">
@@ -185,8 +198,8 @@
 									<p class="cost"><span>$599<sup> 25</sup></span></p>
 								</div>
 								<div class="btn">
-									<button>MORE DETAILS</button>
-									<button>ADD TO CART</button>
+									<button class="more-details">MORE DETAILS</button>
+									<button class="add-to-cart">ADD TO CART</button>
 									<div class="pic_basket"></div>
 								</div>
 							</div>
@@ -199,7 +212,7 @@
 									</div>
 									<div>
 										<div class="like_border_2"></div>
-										<div class="pic_like2"></div>
+										<div class="pic_like2 wish"></div>
 									</div>
 								</div>
 								<div class="about_product_2">
@@ -211,8 +224,8 @@
 									<p class="cost"><span>$1250<sup> 99</sup></span></p>
 								</div>
 								<div class="btn_2">
-									<button>MORE DETAILS</button>
-									<button>ADD TO CART</button>
+									<button class="more-details">MORE DETAILS</button>
+									<button class="add-to-cart">ADD TO CART</button>
 									<div class="pic_basket_2"></div>
 								</div>
 							</div>
@@ -225,7 +238,7 @@
 									</div>
 									<div>
 										<div class="like_border_3"></div>
-										<div class="pic_like3"></div>
+										<div class="pic_like3 wish"></div>
 									</div>
 								</div>
 								<div class="about_product_3">
@@ -237,8 +250,8 @@
 									<p class="cost"><span>$399<sup> 50</sup></span></p>
 								</div>
 								<div class="btn_3">
-									<button>MORE DETAILS</button>
-									<button>ADD TO CART</button>
+									<button class="more-details">MORE DETAILS</button>
+									<button class="add-to-cart">ADD TO CART</button>
 									<div class="pic_basket_3"></div>
 								</div>
 							</div>
@@ -253,7 +266,7 @@
 									</div>
 									<div>
 										<div class="like_border_4"></div>
-										<div class="pic_like4"></div>
+										<div class="pic_like4 wish"></div>
 									</div>
 								</div>
 								<div class="about_product_4">
@@ -265,8 +278,8 @@
 									<p class="cost"><span>$599<sup> 25</sup></span></p>
 								</div>
 								<div class="btn_4">
-									<button>MORE DETAILS</button>
-									<button>ADD TO CART</button>
+									<button class="more-details">MORE DETAILS</button>
+									<button class="add-to-cart">ADD TO CART</button>
 									<div class="pic_basket_4"></div>
 								</div>
 							</div>
@@ -275,7 +288,7 @@
 									<div class="pic_product_5"></div>
 									<div>
 										<div class="zoom_border_5"></div>
-										<div class="pic_zoom5"></div>
+										<div class="pic_zoom5 wish"></div>
 									</div>
 									<div>
 										<div class="like_border_5"></div>
@@ -291,8 +304,8 @@
 									<p class="cost"><span>$1250<sup> 99</sup></span></p>
 								</div>
 								<div class="btn_5">
-									<button>MORE DETAILS</button>
-									<button>ADD TO CART</button>
+									<button class="more-details">MORE DETAILS</button>
+									<button class="add-to-cart">ADD TO CART</button>
 									<div class="pic_basket_5"></div>
 								</div>
 							</div>
@@ -305,7 +318,7 @@
 									</div>
 									<div>
 										<div class="like_border_6"></div>
-										<div class="pic_like6"></div>
+										<div class="pic_like6 wish"></div>
 									</div>
 								</div>
 								<div class="about_product_6">
@@ -317,8 +330,8 @@
 									<p class="cost"><span>$399<sup> 50</sup></span></p>
 								</div>
 								<div class="btn_6">
-									<button>MORE DETAILS</button>
-									<button>ADD TO CART</button>
+									<button class="more-details">MORE DETAILS</button>
+									<button class="add-to-cart">ADD TO CART</button>
 									<div class="pic_basket_6"></div>
 								</div>
 							</div>
@@ -333,7 +346,7 @@
 									</div>
 									<div>
 										<div class="like_border_7"></div>
-										<div class="pic_like7"></div>
+										<div class="pic_like7 wish"></div>
 									</div>
 								</div>
 								<div class="about_product_7">
@@ -345,8 +358,8 @@
 									<p class="cost"><span>$599<sup> 25</sup></span></p>
 								</div>
 								<div class="btn_7">
-									<button>MORE DETAILS</button>
-									<button>ADD TO CART</button>
+									<button class="more-details">MORE DETAILS</button>
+									<button class="add-to-cart">ADD TO CART</button>
 									<div class="pic_basket_7"></div>
 								</div>
 							</div>
@@ -359,7 +372,7 @@
 									</div>
 									<div>
 										<div class="like_border_8"></div>
-										<div class="pic_like8"></div>
+										<div class="pic_like8 wish"></div>
 									</div>
 								</div>
 								<div class="about_product_8">
@@ -371,8 +384,8 @@
 									<p class="cost"><span>$1250<sup> 99</sup></span></p>
 								</div>
 								<div class="btn_8">
-									<button>MORE DETAILS</button>
-									<button>ADD TO CART</button>
+									<button class="more-details">MORE DETAILS</button>
+									<button class="add-to-cart">ADD TO CART</button>
 									<div class="pic_basket_8"></div>
 								</div>
 							</div>
@@ -385,7 +398,7 @@
 									</div>
 									<div>
 										<div class="like_border_9"></div>
-										<div class="pic_like9"></div>
+										<div class="pic_like9 wish"></div>
 									</div>
 								</div>
 								<div class="about_product_9">
@@ -397,8 +410,8 @@
 									<p class="cost"><span>$399<sup> 50</sup></span></p>
 								</div>
 								<div class="btn_9">
-									<button>MORE DETAILS</button>
-									<button>ADD TO CART</button>
+									<button class="more-details">MORE DETAILS</button>
+									<button class="add-to-cart">ADD TO CART</button>
 									<div class="pic_basket_9"></div>
 								</div>
 							</div>
@@ -413,7 +426,34 @@
 		</div>
 		</div>
 	</main>
-	<footer class="footer">Footer</footer>
+	<footer class="footer">
+		<p>© Copyright 2017</p>
+	</footer>
+	
+	<!-- -- modal --  -->
+	<div class="modal">
+		<div class="modal-block">
+			<form action="">
+				<div class="btn-close">X</div>
+				<h3>Please call for more details</h3>
+				<div class="form-fields">
+					<input type="text" placeholder="Your name">
+				</div>
+				<div class="form-fields">
+					<input type="text" placeholder="Your phone">
+				</div>
+				<button>Please call</button>
+			</form>
+		</div>
+	</div>
+	<!-- -- end modal --  -->
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+
+
+	<script src="app.js"></script>
 </body>
 
 </html>
